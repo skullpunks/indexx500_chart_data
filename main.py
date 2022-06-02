@@ -9,7 +9,7 @@ from datetime import datetime
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",
+    "http://52.91.243.59",
 ]
 
 app.add_middleware(

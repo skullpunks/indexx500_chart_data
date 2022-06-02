@@ -15,4 +15,4 @@ git pull origin main
 
 sudo supervisorctl reload 
 
-echo "Application deployed!"
+echo "Application deployed right!"

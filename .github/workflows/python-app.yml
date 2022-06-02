@@ -22,4 +22,4 @@ jobs:
           host: ${{ secrets.SNP_AWS_HOST }}
           username: ${{ secrets.SNP_AWS_USER }} 
           key: ${{ secrets.SNP_AWS_KEY }} 
-          script: 'cd /snp500-data && ./deployer.sh'
+          script: 'cd snp500-data && ./deployer.sh'

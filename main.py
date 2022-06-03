@@ -1,5 +1,3 @@
-from ast import If
-from typing import Union
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware 
 
@@ -8,13 +6,10 @@ import yfinance as yf
 from yahoo_fin.stock_info import get_data,get_live_price
 from datetime import datetime
 
-origins = ["*"]
+origins = ["http://localhost:3000"]
  
 app = FastAPI()
  
-
-
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

@@ -9,7 +9,7 @@ from datetime import datetime
 app = FastAPI()
 
 origins = [
-    "https://effortless-choux-07c058.netlify.app",
+    "https://main--radiant-sawine-92fe28.netlify.app/",
 ]
 
 app.add_middleware(

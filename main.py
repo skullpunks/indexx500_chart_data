@@ -10,6 +10,7 @@ app = FastAPI()
 
 origins = [
     "https://main--radiant-sawine-92fe28.netlify.app",
+    "http://localhost:3000"
 ]
 
 app.add_middleware(

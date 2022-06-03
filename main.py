@@ -1,38 +1,27 @@
 from ast import If
 from typing import Union
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from starlette.middleware import Middleware
-from starlette.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware 
 
 import pandas as pd 
 import yfinance as yf 
 from yahoo_fin.stock_info import get_data,get_live_price
 from datetime import datetime
 
-origins = [
-    "https://main--radiant-sawine-92fe28.netlify.app",
-    "http://localhost:3000",
-    "*"
-
-]
-
-middleware = [
-    Middleware(CORSMiddleware, allow_origins=origins)
-]
-
-app = FastAPI(middleware=middleware)
+origins = ["*"]
+ 
+app = FastAPI()
  
 
 
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")

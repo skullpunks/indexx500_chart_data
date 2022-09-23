@@ -6,7 +6,8 @@ import yfinance as yf
 from yahoo_fin.stock_info import get_data,get_live_price
 from datetime import datetime
 
-origins = ["https://main--radiant-sawine-92fe28.netlify.app/"]
+#origins = ["https://main--radiant-sawine-92fe28.netlify.app/"]
+origins = ["https://in500.chart.indexx.ai/"]
  
 app = FastAPI()
  
